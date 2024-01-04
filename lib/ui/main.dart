@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
               create: (_) => GetGamesProvider(gamesRepository))
         ],
         child: MaterialApp(
+            title: 'RAWG',
             debugShowCheckedModeBanner: false,
             theme: ThemeData(useMaterial3: true),
             home: const GameScreen()));

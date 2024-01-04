@@ -175,7 +175,7 @@ class GamesResult {
   // final List<PlatformElement> platforms;
   // final List<ParentPlatform> parentPlatforms;
   // final List<Genre> genres;
-  // final List<Store> stores;
+  final List<Store> stores;
   // final dynamic clip;
   // final List<Genre> tags;
   // final EsrbRating esrbRating;
@@ -206,7 +206,7 @@ class GamesResult {
     // required this.platforms,
     // required this.parentPlatforms,
     // required this.genres,
-    // required this.stores,
+    required this.stores,
     // required this.clip,
     // required this.tags,
     // required this.esrbRating,
@@ -241,7 +241,7 @@ class GamesResult {
         // parentPlatforms: List<ParentPlatform>.from(
         //     json["parent_platforms"].map((x) => ParentPlatform.fromJson(x))),
         // genres: List<Genre>.from(json["genres"].map((x) => Genre.fromJson(x))),
-        // stores: List<Store>.from(json["stores"].map((x) => Store.fromJson(x))),
+        stores: List<Store>.from(json["stores"].map((x) => Store.fromJson(x))),
         // clip: json["clip"],
         // tags: List<Genre>.from(json["tags"].map((x) => Genre.fromJson(x))),
         // esrbRating: EsrbRating.fromJson(json["esrb_rating"]),
@@ -352,7 +352,7 @@ class Genre {
   final int gamesCount;
   final String imageBackground;
   final String domain;
-  final String language;
+  // final String language;
 
   Genre({
     required this.id,
@@ -361,7 +361,7 @@ class Genre {
     required this.gamesCount,
     required this.imageBackground,
     required this.domain,
-    required this.language,
+    //required this.language,
   });
 
   factory Genre.fromJson(Map<String, dynamic> json) => Genre(
@@ -371,7 +371,7 @@ class Genre {
         gamesCount: json["games_count"],
         imageBackground: json["image_background"],
         domain: json["domain"],
-        language: json["language"],
+        // language: json["language"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -381,7 +381,7 @@ class Genre {
         "games_count": gamesCount,
         "image_background": imageBackground,
         "domain": domain,
-        "language": language,
+        // "language": language,
       };
 }
 
